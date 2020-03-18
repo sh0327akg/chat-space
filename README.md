@@ -2,8 +2,8 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,foreign_key: true|
-|email|string|null: false|
+|name|string|null: false|
+|email|string|null: false,unique: true|
 ### Asocciation
 - has_many:messages
 - has_many:members
@@ -12,7 +12,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false,foreign_key: true|
+|name|string|null: false|
 ### Asocciation
 - has_many:members
 - has_many:users through:members
@@ -21,8 +21,8 @@
 ## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
 ### Asocciation
 - belongs_to:user
 - belongs_to:group
@@ -32,8 +32,8 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
 ### Asocciation
 - belongs_to:user
-- belomgs_to:group
+- belongs_to:group
