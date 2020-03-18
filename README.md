@@ -7,15 +7,15 @@
 ### Asocciation
 - has_many:messages
 - has_many:members
-- has_many:groups through:member
+- has_many:groups through:members
 
-## goupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false,foreign_key: true|
 ### Asocciation
 - has_many:members
-- has_many:users through:member
+- has_many:users through:members
 - has_many:messages
 
 ## membersテーブル
