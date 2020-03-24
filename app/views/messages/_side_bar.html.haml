@@ -1,0 +1,19 @@
+.side-bar
+  .side-header
+    .side-header__box
+      %p.side-header__box__name
+        name
+      %ul.side-header__box__button
+        %li.side-header__box__new-icon
+        = link_to "#" do
+          = icon('fas','edit')
+        %li.side-header__box__edit-icon
+        = link_to "#" do
+          = icon('fas','cog')
+      
+  .side-bar__groups
+    .group
+      %p.group__name
+        group-name
+      %p.group__message
+        message

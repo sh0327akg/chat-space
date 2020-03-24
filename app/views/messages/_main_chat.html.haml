@@ -1,0 +1,38 @@
+.chat-main
+  .main-header
+    .main-header__box
+      %h2.main-header__box__group-name test
+      %ul.main-header__box__member-list
+        Member:
+        %li.main-header__box__member-list--name
+          member1
+    .edit-button
+      = link_to "#",class:"edit-button__name" do
+        Edit
+  .messages
+    .message
+      .message__info
+        %p.message__info__name
+          name
+        %p.message__info__date
+          2020/03/23
+      %div
+        %p.message__text
+          おはよう
+    .message
+      .message__info
+        %p.message__info__name
+          name
+        %p.message__info__date
+          2020/03/23
+      %div
+        %p.message__text
+          こんにちは
+  .form
+    %form.new-message
+      .input-box
+        %input{type:"text",class:"input-box__text",placeholder:"type a new message"}
+        %label{class:"input-box__image"}
+          =icon('fas','image')
+          %input{type:"file",class:"input-box__image__file"}
+      %input{type:"submit",class:"submit-button",value:"Send"}
