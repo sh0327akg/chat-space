@@ -15,25 +15,24 @@ $blue:#38aef0;
   border-bottom:solid 1px #eeeeee;
   display:flex;
   justify-content:space-between;
-}
-.main-header__box{
-  margin-top:35px;
-  position:relative;
+  &__box{
+    margin-top:35px;
+    position:relative;
+    &__group-name{
+      color:#333333;
+      font-size:20px;
+      margin-bottom:15px;
+    }
+    &__member-list{
+      color:#999999;
+      font-size:12px;
+      display:flex;
+      &--name{
+        color:#999999;
+        font-size:12px;
+      }
+    }
   }
-.main-header__box__group-name{
-  color:#333333;
-  font-size:20px;
-  margin-bottom:15px;
-
-}
-.main-header__box__member-list{
-  color:#999999;
-  font-size:12px;
-  display:flex;
-}
-.main-header__box__member-list--name{
-  color:#999999;
-  font-size:12px;
 }
 
 //edit-button
@@ -45,10 +44,10 @@ $blue:#38aef0;
   border:solid 1px $blue;
   position:absolute;
   right:30px;
-}
-.edit-button__name{
-  font-size:16px;
-  color:#38aef8;
+  &__name{
+    font-size:16px;
+    color:#38aef8;
+  }
 }
 
 //messages
@@ -59,26 +58,26 @@ $blue:#38aef0;
   padding:46px 40px;
 }
 .message{
-padding-bottom: 46px;
-}
-.message__info{
-  margin-bottom:12px;
-  display:flex;
-}
-.message__info__name{
-  color:#333333;
-  font-weight:bold;
-  font-size:16px;
-}
-.message__info__date{
-  color:#999999;
-  font-size:12px;
-  margin-left:10px;
-}
-.message__text{
-  color:#434A54;
-  font-size:14px;
-  margin-bottom:10px;
+  padding-bottom: 46px;
+  &__info{
+    margin-bottom:12px;
+    display:flex;
+    &__name{
+      color:#333333;
+      font-weight:bold;
+      font-size:16px;
+    }
+    &__date{
+      color:#999999;
+      font-size:12px;
+      margin-left:10px;
+    }
+  }
+  &__text{
+    color:#434A54;
+    font-size:14px;
+    margin-bottom:10px;
+  }
 }
 
 //form
@@ -93,21 +92,22 @@ padding-bottom: 46px;
 .input-box{
   width:100%;
   position:relative;
+  &__text{
+    height:50px;
+    width:100%;
+    padding:0 40px 0 10px;
+    border-style:none;
+  }
+  &__image{
+    position:absolute;
+    top:10px;
+    right:10px;
+    &__file{
+      display:none;
+    }
+  }
 }
-.input-box__text{
-  height:50px;
-  width:100%;
-  padding:0 40px 0 10px;
-  border-style:none;
-}
-.input-box__image{
-  position:absolute;
-  top:10px;
-  right:10px;
-}
-.input-box__image__file{
-  display:none;
-}
+
 .submit-button{
   height:50px;
   width:100px;
