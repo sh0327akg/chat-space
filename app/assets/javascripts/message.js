@@ -51,8 +51,7 @@ $(function(){
       dataType:'json',
       processData: false,
       contentType: false
-    })
-    .done(function(data){
+    }).done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('form')[0].reset();
@@ -60,7 +59,9 @@ $(function(){
       $('.submit-button').prop('disabled',false);
     }).fail(function(){
       alert("メッセージ送信に失敗しました");
-    });
+    }).always(function(){
+      $('.submit-button').prop('disabled',false);
+    })
   })
 
 });
