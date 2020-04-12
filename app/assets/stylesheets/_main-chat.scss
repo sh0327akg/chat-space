@@ -1,7 +1,6 @@
 $blue:#38aef0;
 
 .chat-main{
-  height:100vh;
   width:calc(100vw - 300px);
   float:left;
 }
@@ -56,6 +55,7 @@ $blue:#38aef0;
   width:100%;
   background-color: #fafafa;
   padding:46px 40px;
+  overflow: scroll;
 }
 .message{
   padding-bottom: 46px;
