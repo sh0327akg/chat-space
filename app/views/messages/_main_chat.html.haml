@@ -5,9 +5,9 @@
         = @group.name
       %ul.main-header__box__member-list
         Member:
-        - @member.each do |m|
+        - @group.group_users.each do |m|
           %li.main-header__box__member-list--name
-            = m.name
+            = m.user.name
     .edit-button
       = link_to edit_group_path(@group),class:"edit-button__name" do
         Edit
